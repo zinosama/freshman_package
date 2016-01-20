@@ -1,0 +1,19 @@
+var app=angular.module("myApp",['ngRoute','firebase']);
+app.config(function($routeProvider){
+	$routeProvider
+	.when('/',{
+		controller:'MainController',
+		templateUrl:'views/main.html'
+	})
+	.when('/photos/:id&:id2',{
+		controller:'PhotoController',
+		templateUrl:'views/photo.html'
+	})
+	.when('/login',{
+		controller:'RegistrationController',
+		templateUrl:'views/login.html'
+	})
+	.otherwise({
+		redirectTo:'/'
+	});
+});

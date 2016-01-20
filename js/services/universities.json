@@ -1,0 +1,22 @@
+[
+	{
+	"name":"University of Rochester",
+	"logo":"img/university/ur.png",
+	"url":"pdf/ur.pdf"
+	},
+	{
+		"name":"Syracus University",
+		"logo":"img/university/syracuse.png",
+		"url":"pdf/syracuse.pdf"
+	},
+	{
+		"name":"University at Buffalo",
+		"logo":"img/university/ub.png",
+		"url":"pdf/ub.pdf"
+	},
+	{
+		"name":"Cornell University",
+		"logo":"img/university/cornell.png",
+		"url":"pdf/cornell.pdf"
+	}	
+]

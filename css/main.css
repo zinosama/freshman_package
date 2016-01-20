@@ -1,0 +1,62 @@
+/*.title{
+	-webkit-animation-name:ride;
+	-moz-animation-name:ride;
+	-o-animation-name:ride;
+	animation-name:ride;
+
+	-webkit-animation-duration: 5s;
+	-moz-animation-duration: 5s;
+	-o-animation-duration: 5s;
+	animation-duration: 5s;
+
+	-webkit-animation-timing-function: ease-in;
+	-moz-animation-timing-function: ease-in;
+	-o-animation-timing-function: ease-in;
+	animation-timing-function: ease-in;
+
+	-webkit-animation-iteration-count: 50;
+	-moz-animation-iteration-count: 50;
+	-o-animation-iteration-count: 50;
+	animation-iteration-count: 50;
+
+	-webkit-animation-delay: 2s;
+	-moz-animation-delay: 2s;
+	-o-animation-delay: 2s;
+	animation-delay: 2s;
+}
+
+.category-title{
+	-webkit-animation-name:ride;
+	-moz-animation-name:ride;
+	-o-animation-name:ride;
+	animation-name:ride;
+
+	-webkit-animation-duration: 2s;
+	-moz-animation-duration: 2s;
+	-o-animation-duration: 2s;
+	animation-duration: 2s;
+
+	-webkit-animation-timing-function: ease-in;
+	-moz-animation-timing-function: ease-in;
+	-o-animation-timing-function: ease-in;
+	animation-timing-function: ease-in;
+
+	-webkit-animation-iteration-count: 50;
+	-moz-animation-iteration-count: 50;
+	-o-animation-iteration-count: 50;
+	animation-iteration-count: 50;
+
+	-webkit-animation-delay: 4s;
+	-moz-animation-delay: 4s;
+	-o-animation-delay: 4s;
+	animation-delay: 4s;
+}
+
+@-webkit-keyframes ride{
+	from{-webkit-transform: translateX(0px);}
+	to{-webkit-transform: translateX(400px);}
+}*/
+
+.navbar_rightmost{
+	padding-right: 20px;
+}

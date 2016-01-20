@@ -1,0 +1,26 @@
+<div class="navbar-header">
+	<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapseA">
+	<span class="sr-only">Toggle navigatin</span>
+	<span class="icon-bar"></span>
+	<span class="icon-bar"></span>
+	<span class="icon-bar"></span>
+	</button>
+</div>
+
+<div class="collapse navbar-collapse" id="collapseA" ng-controller="NavController">
+	<ul class="nav navbar-nav">
+		<li id="home"><a ng-href="#/" ng-click="checkURL('#/')">Home</a></li>
+		<li id="checklist"><a ng-href="#/checklist" ng-click="checkURL('#/checklist')">Official CheckList</a></li>
+		<li id="contact"><a ng-href="#/contact" ng-click="checkURL('#/contact')">About Us</a></li>
+	</ul>
+	<ul class="nav navbar-nav navbar-right">
+		<li id="login"><a ng-hide="currentUser" ng-href="#/login" ng-click="checkURL('#/login')">Login</a></li>
+		<li id="register" class="navbar_rightmost"><a ng-hide="currentUser" ng-href="#/register" ng-click="checkURL('#/register')">Register</a></li>
+		<li id="myAccount"><a ng-show="currentUser" ng-href="#/myAccount" ng-click="checkURL('#/myAccount')">{{currentUser.email}}</a></li>
+		<li id="cart"><a ng-show="currentUser" ng-href="#/myCart" ng-click="checkURL('#/myCart')"><span class="glyphicon glyphicon-shopping-cart"></span> Cart {{"("+howManyItems+")"}}</a></li>
+		<li class="navbar_rightmost" ng-controller="StatusController">
+			<a ng-show="currentUser" ng-href="#/login" ng-click="logout()">Logout</a>
+		</li>
+
+	</ul>
+</div>

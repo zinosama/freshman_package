@@ -1,0 +1,31 @@
+<div class="jumbotron" style="background-image:url('img/checklist_pic.jpg');background-repeat:no-repeat;background-position:center;height:600px;margin-top:-2.5em;">
+	<div class="container">
+		<h1 style="color:white;text-align:center;margin-top:1em;letter-spacing:8px;font-size:8em;">CHECKLISTS</h1>
+	</div>
+</div>
+<div class="centerBox" style="width:80%;margin:auto;max-width:950px;">
+	<p style="background-color:#39393A;color:white;line-height:27px;font-size:14px;font-family: 'Montserrat', sans-serif; padding-top: 3em;padding-bottom: 3em;padding-left: 5em;font-weight: 400;padding-right: 5em;letter-spacing: 1.5px; position: relative;margin-top:-10em; text-align:center; margin-bottom:5em;margin-left:auto;margin-right:auto;">我们搜集并在此提供了各所学校官方的入学携带品清单以方便你在购物的时候随时对照,以免遗漏任何物品.我们希望每一个来到美国的新生都不用再为入学第一天的购物烦恼,因此我们为你提供了平时难以买到或者搬运不方便的优质生活必须品,并为你提供免费的定时送货服务.请注意,以下链接为PDF文件,部分手机无法正确显示.为了确保最好的购物体验,我们建议使用电脑进行查看.</p>
+</div>
+
+
+<div class="main">
+	<div class="container">
+<!-- 		<div class="titleImage" style="width:20%; min-width:290px; margin:auto;">
+			<img class="img-responsive" src="img/font/checklist.png" alt="checklist">
+		</div>
+ -->
+		<div class="checklist_university_block" style="width: 70%;border: 1px solid #B9B9B9;margin: auto;border-radius: 5px;padding: 0.5em;margin-top: 3em;"
+		ng-repeat="university in universities">
+			<a ng-href="#/pdf/{{$index}}" style="text-decoration:none;color: #3E3E3E;">
+				<div class="row">
+					<div class="col-sm-4" style="margin: auto;padding-top: 0.7em;padding-bottom: 0.7em;position: relative;left: 2em;">
+						<img class="img-responsive" ng-src="{{university.logo}}">
+					</div>
+					<div class="col-sm-8" style="text-align: center;font-size: 2em;font-family: 'Montserrat', sans-serif; padding-top: 0.5em;">
+						<p>{{university.name}}</p>
+					</div>
+				</div>
+			</a>
+		</div>
+	</div>
+</div>

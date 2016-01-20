@@ -1,0 +1,26 @@
+[
+	{
+		"name":"AmazonBasics Navy Blue",
+		"price":13.99,
+		"img":"img/amazonbasics-navy-blue-sheet.jpg",
+		"rating":4.5
+	},
+	{
+		"name":"AmazonBasics White",
+		"price":13.99,
+		"img":"img/amazonbasics-white-sheet.jpg",
+		"rating":4.5
+	},
+	{
+		"name":"AmazonBasics Spa Blue",
+		"price":13.99,
+		"img":"img/amazonbasics-spa-blue-sheet.jpg",
+		"rating":5		
+	},
+	{
+		"name":"AmazonBasics Dark Grey",
+		"price":13.99,
+		"img":"img/amazonbasics-dark-grey-sheet.jpg",
+		"rating":4.5		
+	}
+]

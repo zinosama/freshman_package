@@ -1,0 +1,66 @@
+<div class="main">
+	<div class="jumbotron" style="background-image:url('img/home_pic.jpg');background-repeat:no-repeat;background-position:center;height:600px;margin-top:-2.5em;"></div>
+	
+	<div class="container" style="margin-top:-40em;"> 
+		<div class="titleImage" style="width:70%; min-width:290px; margin:auto;max-width: 350px;">
+			<img id="top_img" class="img-responsive" src="img/font/title.png" alt="FreshmanPackage">
+			<p id="beta" style="font-weight: 700;font-size: 20px;position: relative;top: -0.5em;">BETA</p>
+		</div>
+		<nav class="navbar navbar-default">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapseB" aria-expanded="false">
+				<span class="sr-only">Toggle navigatin</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				</button>
+			</div>
+			<div class="collapse navbar-collapse" id="collapseB" > 
+				<ul class="nav navbar-nav">
+					<li ng-click="categoryQuery('bed')"><a href="">Bed</a></li>
+					<li ng-click="categoryQuery('lighting')"><a href="">Light</a></li>
+					<li ng-click="categoryQuery('living')"><a href="">Living</a></li>
+					<li ng-click="categoryQuery('applicance')"><a href="">Electronics</a></li>
+					<li ng-click="categoryQuery('grocery')"><a href="">Grocery</a></li>
+				</ul>
+				<form class="navbar-form navbar-right" role="search">
+			        <div class="form-group">
+		    	      <input type="text" class="form-control" placeholder="Search" ng-model="searchQuery">
+		       		</div>
+		      	</form>
+			</div>
+		</nav>
+
+		<div class="alert alert-success alert-dismissible" role="alert">
+  			<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+  			<strong>Dear Shoppers!</strong> Freshman Package has STOPPED ACCEPTING ORDER on 12:00PM August 19, 2015. We have received numerous support from our friends at the University of Rochester. Thank you very much for your love! If you like our services, please stay tuned at our official WeChat account - zinosama. Bye!
+		</div>
+
+		<div ng-repeat="category in categories">
+			<div ng-repeat="product in category.products|filter:primQuery |filter: searchQuery" class="col-lg-3 col-md-4 col-sm-6">
+				<div class="thumbnail">
+					<a ng-href="#/photos/{{$parent.$index}}%26{{$index}}">
+						<img ng-src="{{product.img}}" >
+					</a>
+					<div class="caption">
+					<p class="name">{{product.name}} </p>
+					<p class="price">Price: {{product.price|currency}} </p>
+					<a ng-ref="#" ng-click="addToCart($parent.$index, $index)" id="cartButton" class="btn addToCartButton" role="button" data-toggle="modal" data-target=".mainModel">Add to Cart</a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Small modal -->
+		<div class="modal fade mainModel" tabindex="-1" role="dialog" aria-labelledby="main-model" id="main-model">
+		  <div class="modal-dialog modal-sm">
+		    <div class="modal-content" id="modal-content"style="padding:15px;">
+		        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+		        	<p style="font-weight:500; font-size:27;">Item Added To Cart</p>
+		        	<button class="btn btn-default btn-primary" data-dismiss="modal" style="display: inline-block;" id="continueButton">Continue Shopping</button>
+		      		<button class="btn btn-default btn-primary" id="cartButtonMain" style="display: inline-block;">Go to Cart</button>
+		    </div>
+		  </div>
+		</div>
+	</div>
+</div>

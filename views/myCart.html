@@ -1,0 +1,32 @@
+<div class="container">
+	<div class="row" style="margin-top:2em;">
+		<div class="col-lg-8">
+			<table class="table table-hover" style="margin-bottom:0px;">
+				<tr>
+					<th>Product</th>
+					<th>Name</th>
+					<th>Price</th>
+					<th>Rating</th>
+					<th>Quantity</th>
+				</tr>
+					<tr ng-repeat="index in allIndex">
+						<td><img ng-src="{{categories[index.indexOne].products[index.indexTwo].img}}" alt="product" class="img-rounded img-responsive" height="200px" width="200px"></td>
+						<td><p class="tableItem">{{categories[index.indexOne].products[index.indexTwo].name}}</p></td>
+						<td><p class="tableItem">{{categories[index.indexOne].products[index.indexTwo].price|currency}}</p></td>
+						<td><p class="tableItem">{{categories[index.indexOne].products[index.indexTwo].rating}}</p></td>
+						<td><p class="tableItem">{{index.quantity}}</p></td>
+						<td><a ng-ref="#" ng-click="addToCart(index.key)" class="btn btn-success tableButton" role="button">Add</a></td>					
+						<td><a ng-ref="#" ng-click="removeFromCart(index.key)" class="btn btn-danger tableButton" role="button">Remove</a></td>
+
+					</tr>
+			</table>
+			<img src="img/font/shoppingCart.png" width="500px" style="margin-left:20em;">
+		</div>
+		<div class="col-lg-4" style="border:solid 1px rgb(213,213,213);padding: 14px 18px; border-radius: 0.5em;">
+			<img src="img/font/totalBeforeTax.png" width="200px" style="display: inline-block; margin-right: -6em;padding-bottom: 0.5em;">
+			<p style="font-weight:700; font-size:22px; display:inline-block;">{{total|currency}}</p>
+			<a ng-href="#/checkout" class="btn btn-primary btn-block" role="button">Continue</a>
+		</div>
+	</div>	
+</div>
+

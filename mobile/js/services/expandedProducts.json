@@ -1,0 +1,87 @@
+[
+	{
+		"type":"sheet",
+		"products":[
+		{
+			"name":"AmazonBasics Navy Blue",
+			"price":13.99,
+			"img":"img/amazonbasics-navy-blue-sheet.jpg",
+			"rating":4.5
+		},
+		{
+			"name":"AmazonBasics White",
+			"price":13.99,
+			"img":"img/amazonbasics-white-sheet.jpg",
+			"rating":4.5
+		},
+		{
+			"name":"AmazonBasics Spa Blue",
+			"price":13.99,
+			"img":"img/amazonbasics-spa-blue-sheet.jpg",
+			"rating":5		
+		},
+		{
+			"name":"AmazonBasics Dark Grey",
+			"price":13.99,
+			"img":"img/amazonbasics-dark-grey-sheet.jpg",
+			"rating":4.5		
+		}
+		]
+	},
+	{
+		"type":"pillow",
+		"products":[
+		{
+			"name":"Perfect Fit Extra Firm - King",
+			"price":31.85,
+			"img":"img/perfect-fit-extra-firm-king-pillow.jpg",
+			"rating":4
+		},
+		{
+			"name":"Perfect Fit Firm - King",
+			"price":39.79,
+			"img":"img/perfect-fit-firm-king-pillow.jpg",
+			"rating":4
+		},
+		{
+			"name":"Perfect Fit Medium Firm - King",
+			"price":39.99,
+			"img":"img/perfect-fit-medium-firm-king-pillow.jpg",
+			"rating":4
+		},
+		{
+			"name":"Sleep Innovation Memory Foam - Standard",
+			"price":23.04,
+			"img":"img/sleep-innovation-memory-foam-standard-pillow.jpg",
+			"rating":4
+		}]
+	},
+	{
+		"type":"comforter",
+		"products":[
+		{
+			"name":"Kinglinen White Down - Queen",
+			"price":39,
+			"img":"img/kinglinen-white-down-queen-comforter.jpg",
+			"rating":4.5
+		},
+		{
+			"name":"Chezmoi 3-Piece Black - Queen",
+			"price":52.5,
+			"img":"img/chezmoi-3-piece-black-queen-comforter.jpg",
+			"rating":4
+		},
+		{
+			"name":"Kinglinen Black Down - Queen",
+			"price":49.99,
+			"img":"img/kinglinen-black-down-queen-comforter.jpg",
+			"rating":4.5
+		},
+		{
+			"name":"Chezmoi 3-Piece White - Queen",
+			"price":45.05,
+			"img":"img/chezmoi-3-piece-white-queen-comforter.jpg",
+			"rating":4.5
+		}]
+	}
+]

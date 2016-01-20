@@ -1,0 +1,78 @@
+<div class="container">
+	<div class="row" style="padding-top:2em; padding-bottom:3em;">
+		<div class="col-md-4 col-md-offset-1" style="padding-top:7.5em; margin-right:2em;">
+			<img ng-src="{{detail.img}}" class="img-responsive"  style="border-bottom:1px solid rgb(213,213,213); padding-bottom:2.5em;">
+			<div class="img-thumb">
+			<a ng-repeat="imgL in detail.imgs" class="fancybox" rel="gallery1" href="{{imgL}}">
+					<img ng-src="thumbnail/{{imgL}}">
+			</a>
+			</div>
+		</div>
+
+		<div class="col-md-6">
+			<h2 class="name">{{detail.name}}</h2>
+			<p>Free Delivery</p>
+			<p style="font-weight:300;font-size:27px;">{{detail.price|currency}}</p>
+			<a id="orderButton" ng-ref="#" ng-click="addToCart()" class="btn btn-lg" data-toggle="modal" data-target=".bs-example-modal-sm" role="button">Order</a>
+			<!-- Small modal -->
+			<div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" id="successModel">
+			  <div class="modal-dialog modal-sm">
+			    <div class="modal-content" style="padding:15px;">
+			        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+			        	<p style="font-weight:500; font-size:27;">Item Added To Cart</p>
+			        	<button class="btn btn-default btn-primary" data-dismiss="modal" style="display: inline-block;" id="continueButton">Continue Shopping</button>
+			      		<button class="btn btn-default btn-primary" id="cartButton" style="display: inline-block;">Go to Cart</button>
+			    </div>
+			  </div>
+			</div>
+
+			<div style="padding-top:2em;">
+				<ul class="nav nav-tabs" role="tablist">
+					<li role="presentation" class="active myTabs">
+						<a href="#productDescription" aria-controls="productDescription" role="tab" data-toggle="tab">Product Description</a>
+					</li>
+					<li role="presentation" class="myTabs">
+						<a href="#ourOpinion" aria-controls="ourOpinion" role="tab" data-toggle="tab">Our Opinion</a>
+					</li>
+					<li role="presentation" class="myTabs">
+						<a href="#school" aria-controls="school" role="tab" data-toggle="tab">Universities</a>
+					</li>
+				</ul>
+
+				<div class="tab-content">
+					<div role="tabpanel" class="tab-pane fade in active" id="productDescription">
+						<div class="productDescription">{{detail.description}}</div>
+					</div>
+					<div role="tabpanel" class="tab-pane fade in" id="ourOpinion">
+						<div class="ourOpinion">{{detail.reason}}</div>
+					</div>
+					<div role="tabpanel" class="tab-pane fade in" id="school">
+						<div class="school">
+							<p>This item is selected for the following universities:</p><p>University of Rochester</p><p>Syracuse University</p><p>University at Buffalo</p><p>Cornell University</p>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div style="border-top: 1px solid rgb(213,213,213); margin-top:2em;">
+				<img src="img/font/customerService.png" width="250px" style="position:relative;
+	bottom:-5px;">
+				<p>If you have any questions regarding the ordering process or need help with our products, please email us at team@post-app.com. We're here to help!</p>
+			</div>
+			<div style="border-top: 1px solid rgb(213,213,213); margin-top:2em;">
+				<img src="img/font/freeDelivery.png" width="250px" style="position:relative;
+	bottom:-5px;">
+				<p>Let us know when you will be arriving on campus, and your order will awaiting you at school mailroom. Oh, and delivery is absolutely FREE of Charge!</p>
+			</div>
+			<div style="border-top: 1px solid rgb(213,213,213); margin-top:2em;">
+				<img src="img/font/payment.png" width="250px" style="position:relative;
+	bottom:-5px;">
+				<p>We proudly accept the following payment methods</p>
+				<img src="img/card-logo.png" width="200px">					
+			</div>			
+		</div>
+</div>
+
+
+
+<!-- because we believe in reasons -->

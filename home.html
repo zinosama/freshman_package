@@ -1,0 +1,180 @@
+<!DOCTYPE <!DOCTYPE html>
+<html>
+<head>
+	<title>Freshman Package</title>
+	<meta name='viewport' content='width=device-width, initial-scale=1.0' />
+	<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+	<link rel="icon" href="img/favicon.ico" type="image/x-icon">
+ 	
+ 	<link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/googlefont.css" type='text/css'>
+    <link href="css/main.css" rel="stylesheet" type="text/css">
+    <link href='css/montserrat.css' rel='stylesheet' type='text/css'>
+
+	<script src="js/shared/jquery-2.1.4.min.js"></script>
+    <script src="js/shared/bootstrap.min.js"></script>
+    <script src="js/shared/angular.min.js"></script>
+    <script src="js/shared/angular-route.min.js"></script>
+	<!-- Firebase -->
+	<script src="js/shared/firebase.min.js"></script>
+	<!-- AngularFire -->
+	<script src="js/shared/angularfire.min.js"></script>
+	<!-- The required Stripe lib -->
+	<!--<script type="text/javascript" src="js/shared/stripeLib.js"></script>-->
+	<script type="text/javascript" src="https://js.stripe.com/v2/"></script>
+	<!-- jQuery Payment Plugin -->
+	<script src="js/JQPaymentValidator/lib/jquery.payment.js"></script>
+    
+    <style>
+    body{
+    	padding-top: 60px;
+    }
+    .name{
+    	white-space: pre-line;
+    }
+    .container{
+    	max-width: 70%;
+    }
+    .thumbnail:hover{
+    	background-color: #E4E4E4;
+    }
+    .tableItem{
+    	padding-top:25px;
+    }
+    .tableButton{
+    	margin-top:25px;
+    }
+    .checkout-right-out-1{
+    	border: solid 1px rgb(213, 213, 213);
+  		padding: 14px 18px;
+  		border-radius: 0.5em;
+  		margin-top:2em;
+    }
+    .checkout-right-out-2{
+    	border-bottom: 1px solid rgb(213, 213, 213);
+	  	padding-top: 0.5em;
+	  	padding-bottom: 1.2em;
+    }
+    .checkout-right-out-3{
+    	padding-top:1.2em;
+    	padding-bottom: 1em;
+    	border-bottom: 1px solid rgb(213,213,213);
+    }
+    .checkout-right-table td{
+    	padding-bottom: 4px;
+    }
+	li.myTabs {
+	  	background-color: rgb(242, 242, 242);
+	  	border-radius: 0.3em;
+	  	border-bottom: solid 1px rgb(213,213,213);
+	}
+	li.myTabs.active {
+  		background-color: white;
+	}
+	.tab-pane.active {
+	  	padding-top: 2em;
+	}
+	.productDescription{
+		white-space: pre-line;
+	}
+	.ourOpinion{
+		white-space:pre-line;
+	}
+	#orderButton{
+		background-color: black;
+		border-color: black;
+	}
+	#orderButton:hover{
+		background-color: #838383;
+		border-color:#838383;
+	}
+	.img-thumb{
+		padding-top: 1.5em;
+	}
+	.addToCartButton{
+  		background-color: rgb(237, 237, 237);
+  		border-color: rgb(228, 228, 228);
+  		color: rgb(123, 123, 123);
+		font-size: 17;
+  		font-weight: 700;		
+	}
+	.addToCartButton:hover{
+		background-color: #838383;
+		border-color:#838383;
+	}
+	.outFirst{
+		border:12px solid black;
+	}
+	.orderHistoryTableInfo{
+	  	font-size: 20px;
+ 		font-weight: 600;
+	  	color: #337ab7;
+	}
+	.member_title{
+		color:#1ebad6;
+	}
+	.member_description{
+		max-width: 400px;
+		font-weight: 500; 
+		line-height: 1.6em; 
+		text-align:center;
+		margin:auto;
+		font-family: 'Montserrat', sans-serif;
+	}
+	.university_listing{
+	    letter-spacing: 3px;
+	    font-weight: 500;
+	    line-height: 1.5em;
+	    font-size: 14px;
+	}
+	#top_img, #beta{
+		display: inline-block;
+	}
+    </style>
+</head>
+<body ng-app="myApp">
+	<header>
+		<nav class="navbar navbar-default navbar-inverse navbar-fixed-top" role="navigation" ng-include="'views/nav.html'"></nav>
+	</header>
+	<div ng-view></div>
+
+<!-- 	<iframe width="200" height="130" src="https://www.youtube.com/embed/videoseries?list=PLizb98HdiIjM7led83Yv3fG0DuyhMQuyW&autoplay=1&loop=1" frameborder="0" allowfullscreen></iframe> -->	
+	
+	<!-- Add mousewheel plugin (this is optional) -->
+	<script type="text/javascript" src="fancybox/lib/jquery.mousewheel-3.0.6.pack.js"></script>
+
+	<!-- Add fancyBox -->
+	<link rel="stylesheet" href="fancybox/source/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
+	<script type="text/javascript" src="fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+	<!-- Optionally add helpers - button, thumbnail and/or media -->
+	<link rel="stylesheet" href="fancybox/source/helpers/jquery.fancybox-buttons.css?v=1.0.5" type="text/css" media="screen" />
+	<script type="text/javascript" src="fancybox/source/helpers/jquery.fancybox-buttons.js?v=1.0.5"></script>
+	<script type="text/javascript" src="fancybox/source/helpers/jquery.fancybox-media.js?v=1.0.6"></script>
+
+	<link rel="stylesheet" href="fancybox/source/helpers/jquery.fancybox-thumbs.css?v=1.0.7" type="text/css" media="screen" />
+	<script type="text/javascript" src="fancybox/source/helpers/jquery.fancybox-thumbs.js?v=1.0.7"></script>
+
+	<!-- Modules -->
+	<script src="js/app.js"></script>
+
+	<!-- Controllers -->
+	<script src="js/controllers/MainController.js"></script>
+	<script src="js/controllers/PhotoController.js"></script>
+	<script src="js/controllers/RegistrationController.js"></script>
+	<script src="js/controllers/StatusController.js"></script>
+	<script src="js/controllers/MyAccountController.js"></script>
+	<script src="js/controllers/ShoppingCartController.js"></script>
+	<script src="js/controllers/NavController.js"></script>
+	<script src="js/controllers/CheckOutController.js"></script>
+	<script src="js/controllers/SuccessController.js"></script>
+	<script src="js/controllers/ContactController.js"></script>
+	<script src="js/controllers/ChecklistController.js"></script>
+	<script src="js/controllers/PdfController.js"></script>
+	<script src="js/controllers/AiyouController.js"></script>
+	<!-- services -->
+	<script src="js/services/productListing.js"></script>
+	<script src="js/services/universityListing.js"></script>
+	<script type="text/javascript" src="js/services/authentication.js"></script>
+</body>
+</html>

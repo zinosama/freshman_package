@@ -1,0 +1,76 @@
+<div class="main">
+	<div style="width:40%;margin:auto;min-width:350px;">
+		<div class="row" style="margin-top:1.5em; margin-bottom:1.5em;">
+			<div class="col-sm-6">
+				<img class="img-responsive" src="img/font/title.png" alt="FreshmanPackage" style="padding-top: 1em;">
+			</div>
+			<div class="col-sm-6">
+				<p style="font-weight: 600; font-size: 22;">SIGN UP TO SHOP</p>
+				<p>Welcome to Freshman Package, the easiest way to shop for your college supplies</p>
+				<p>Shipping is always FREE. Order ahead of time, and we will deliver on the day you want us to!</p> 
+			</div> 
+		</div>
+		<p ng-show="message" style="color:rgb(242, 104, 35);">{{message}}</p>
+		<form class="form-horizontal" name="myform" ng-submit="register()" novalidate>			
+			<div class="form-group" style="margin-left:0px; margin-right:0px;">
+				<label for="university" class="control-label" style="font-size: 1.2em;">University</label>
+				<div>
+					<input class="form-control" type="text" name="university" id="university" placeholder="Your University"
+					ng-model="user.university" ng-required="true">
+					<p ng-show="myform.university.$invalid && myform.university.$touched">Please enter the university you are attending</p>
+				</div>
+			</div>
+
+			<div class="form-group" style="margin-left:0px; margin-right:0px;">
+				<label for="email" class="control-label" style="font-size: 1.2em;">Email</label>
+				<div>
+					<input class="form-control" type="email" name="email" id="email" placeholder="Email"
+					ng-model="user.email" ng-required="true">
+					<p ng-show="myform.email.$invalid && myform.email.$touched">Please enter a valid email</p>
+				</div>
+			</div>
+
+			<div class="form-group" style="margin-left:0px; margin-right:0px;">
+				<label for="password" class="control-label" style="font-size: 1.2em;">Password</label>
+				<div>
+					<input class="form-control" type="password" name="password" placeholder="Password" id="password" 
+					ng-model="user.password" ng-required="true">
+					<p ng-show="myform.password.$invalid && myform.password.$touched">Please enter your password</p>
+				</div>
+			</div>
+
+			<div class="form-group" style="margin-left:0px; margin-right:0px;">
+				<label for="wechat" class="control-label" style="font-size: 1.2em;">WeChat Id</label>
+				<div>
+					<input class="form-control" type="text" name="wechat" placeholder="WeChat Id" id="wechat" 
+					ng-model="user.wechat" ng-required="true">
+					<small>We are collecting this information to contact you in case of a product outage.</small>
+					<p ng-show="myform.wechat.$invalid && myform.wechat.$touched">Please enter your WeChat Id</p>
+				</div>
+			</div>
+
+			<div class="form-group" style="margin-left:0px; margin-right:0px;">
+				<label for="firstname" class="control-label" style="font-size: 1.2em;">First Name</label>
+				<div>
+					<input class="form-control" type="firstname" name="firstname" placeholder="First Name" id="firstname" 
+					ng-model="user.firstname" ng-required="true">
+					<p ng-show="myform.firstname.$invalid && myform.firstname.$touched">Please enter your first name</p>
+				</div>
+			</div>
+
+			<div class="form-group" style="margin-left:0px; margin-right:0px;">
+				<label for="lastname" class="control-label" style="font-size: 1.2em;">Last Name</label>
+				<div>
+					<input class="form-control" type="lastname" name="lastname" placeholder="Last Name" id="lastname" 
+					ng-model="user.lastname" ng-required="true">
+					<p ng-show="myform.lastname.$invalid && myform.lastname.$touched">Please enter your last name</p>
+				</div>
+			</div>
+
+			<button type="submit" class="btn btn-default btn-lg btn-block" ng-disabled="myform.$invalid">Register</button>
+			</form>
+
+		</form>
+
+	</div>
+</div>
